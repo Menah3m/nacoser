@@ -1,0 +1,14 @@
+NacosServer:
+  IpAddr:
+  Port:
+  ContextPath: /nacos
+  Scheme: http
+NacosClient:
+  NamespaceId: ""
+  TimeoutMs: 5000
+  Username:
+  Password:
+Target:
+  DataID:
+  Group: ""
+

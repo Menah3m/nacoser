@@ -1,0 +1,5 @@
+.idea/
+.idea
+.DS_Store
+/examples/config.yaml
+*.log
