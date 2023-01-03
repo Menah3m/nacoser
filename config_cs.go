@@ -1,5 +1,5 @@
-// 包 configer 实现了读取nacos配置的封装
-package configer
+// 实现了读取nacos配置的封装
+package nacoser
 
 import (
 	"fmt"
