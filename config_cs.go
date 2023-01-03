@@ -2,7 +2,6 @@
 package nacoser
 
 import (
-	"fmt"
 	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
 	"github.com/spf13/viper"
 	"strconv"
@@ -13,11 +12,6 @@ import (
    @Auth: menah3m
    @Desc:
 */
-
-// type NacosConfig struct {
-// 	ServerConfig NacosServerConfig
-// 	ClientConfig NacosClientConfig
-// }
 
 type NacosServerConfig struct {
 	IpAddr      string
@@ -74,7 +68,6 @@ func (c *Configer) ReadParamsFromFile(filePath string) error {
 	c.Params.Content = c.Viper.GetString("target.content")
 	//
 
-	fmt.Println(c)
 	return nil
 }
 
@@ -97,7 +90,7 @@ func (c *Configer) BindNacosClientParams() Config {
 			Port:        uint64(port),
 		},
 	}
-	fmt.Println("BindNacosClientParams")
+
 	return Config{
 		ClientConfig: clientConfig,
 		ServerConfig: serverConfig,
@@ -105,7 +98,7 @@ func (c *Configer) BindNacosClientParams() Config {
 }
 
 func (c *Configer) BindTargetParams() Params {
-	fmt.Println("BindTargetParams")
+
 	return Params{
 		DataID:  c.Params.DataID,
 		Group:   c.Params.Group,
